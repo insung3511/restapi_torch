@@ -1,0 +1,6 @@
+torch>=1.13.1
+numpy>=1.23.5
+opencv-python>=4.8.0.74
+fastapi>=0.96.0
+pydantic>=2.0.1
+uvicorn[standard]>=0.23.2

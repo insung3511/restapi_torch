@@ -1,3 +1,8 @@
+# Note: 
+# This code based on MNIST classification model scenario. 
+# Models, params can change on your own project or services.
+# Device on your selection, 'cpu', 'cuda', 'mps'
+# SAVED_MODEL_PATH is also kind of example it wouldn't should be load it.
 from model.classify_model import MNIST_Classify_Model, DataPreprocessing
 import numpy as np
 import torch
@@ -8,7 +13,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from fastapi import FastAPI
 
-device = torch.device('mps')
+device = torch.device('cpu')
 SAVED_MODEL_PATH = "./model/model.pth"
 
 CLASSIFY_MODEL = MNIST_Classify_Model().to(device)
